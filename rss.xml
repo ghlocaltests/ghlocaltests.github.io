@@ -8,11 +8,11 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Help developers to test locally or Lan</title>
-        <link>https://example.com/</link>
+        <link>http://localhost:1313/</link>
         <description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
         <generator>Hugo 0.154.5 https://gohugo.io/</generator>
         
-            <language>zh-CN</language>
+            <language>en-US</language>
         
         
             <managingEditor>reuixiy@gmail.com (reuixiy)</managingEditor>
@@ -23,10 +23,114 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 14 Jan 2026 01:27:49 &#43;0800</lastBuildDate>
+        <lastBuildDate>Wed, 14 Jan 2026 12:10:59 &#43;0800</lastBuildDate>
         
-            <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
+            <atom:link rel="self" type="application/rss&#43;xml" href="http://localhost:1313/rss.xml" />
         
+        
+            <item>
+                <title>
+Home</title>
+                <link>http://localhost:1313/posts/home/</link>
+                <guid isPermaLink="true">http://localhost:1313/posts/home/</guid>
+                <pubDate>Mon, 12 Jan 2026 12:23:48 &#43;0800</pubDate>
+                
+                    <author>reuixiy@gmail.com (reuixiy)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                
+                <description>
+                        
+&lt;p&gt;This is to help developers to test their service locally but with https enabled.&lt;/p&gt;
+&lt;p&gt;The following &lt;strong&gt;DNS&lt;/strong&gt; records have been created:&lt;/p&gt;
+&lt;div class=&#34;table-container&#34;&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Host&lt;/th&gt;
+          &lt;th&gt;IP&lt;/th&gt;
+          &lt;th&gt;Notes&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;localhost.local-tests.dev&lt;/td&gt;
+          &lt;td&gt;127.0.0.1&lt;/td&gt;
+          &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ip-192-168-0-1.local-tests.dev&lt;/td&gt;
+          &lt;td&gt;192.168.0.1&lt;/td&gt;
+          &lt;td&gt;Start IP&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ip-192-168-0-255.local-tests.dev&lt;/td&gt;
+          &lt;td&gt;192.168.0.255&lt;/td&gt;
+          &lt;td&gt;End IP&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ip-192-168-1-1.local-tests.dev&lt;/td&gt;
+          &lt;td&gt;192.168.1.1&lt;/td&gt;
+          &lt;td&gt;Start IP&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ip-192-168-1-255.local-tests.dev&lt;/td&gt;
+          &lt;td&gt;192.168.1.255&lt;/td&gt;
+          &lt;td&gt;End IP&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ip-192-168-50-1.local-tests.dev&lt;/td&gt;
+          &lt;td&gt;192.168.50.1&lt;/td&gt;
+          &lt;td&gt;Start IP&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ip-192-168-50-255.local-tests.dev&lt;/td&gt;
+          &lt;td&gt;192.168.50.255&lt;/td&gt;
+          &lt;td&gt;End IP&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ip-192-168-88-1.local-tests.dev&lt;/td&gt;
+          &lt;td&gt;192.168.88.1&lt;/td&gt;
+          &lt;td&gt;Start IP&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ip-192-168-88-255.local-tests.dev&lt;/td&gt;
+          &lt;td&gt;192.168.88.255&lt;/td&gt;
+          &lt;td&gt;Start IP&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;&lt;/div&gt;
+&lt;p&gt;For example,&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ nslookup ip-192-168-88-1.local-tests.dev
+Server:         fddd:dddd::
+Address:        fddd:dddd::#53
+
+Non-authoritative answer:
+Name:   ip-192-168-88-1.local-tests.dev
+Address: 192.168.88.1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And you can config your host name to this host to debug your services, with the https certificate from &lt;strong&gt;LetsEncrypt&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;at &lt;a href=&#34;https://github.com/ghlocaltests/certificates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/ghlocaltests/certificates&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And config your service (Like SpringBoot/Tomcat/Nginx) to use this certificate, to enable https.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+
+                        
+&lt;blockquote&gt;
+&lt;p&gt;阅读原文：&lt;a href=&#34;http://localhost:1313/posts/home/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://localhost:1313/posts/home/&lt;/a&gt;&lt;br&gt;
+博客公告：博客现已开通邮件订阅，欢迎&lt;a href=&#34;https://username.substack.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;通过 Substack 订阅&lt;/a&gt;支持我的创作！&lt;/p&gt;
+&lt;/blockquote&gt;
+                    </description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
         
     </channel>
 </rss>
