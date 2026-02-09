@@ -10,7 +10,7 @@
         <title>Help developers to test locally or Lan</title>
         <link>https://www.local-tests.dev/</link>
         <description>MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。</description>
-        <generator>Hugo 0.154.5 https://gohugo.io/</generator>
+        <generator>Hugo 0.155.3 https://gohugo.io/</generator>
         
             <language>en-US</language>
         
@@ -19,7 +19,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 27 Jan 2026 08:41:23 &#43;0000</lastBuildDate>
+        <lastBuildDate>Mon, 09 Feb 2026 01:19:57 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://www.local-tests.dev/rss.xml" />
         
